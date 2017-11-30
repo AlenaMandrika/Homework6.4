@@ -139,12 +139,12 @@ export default class Tamagotchi extends Component {
             greeting: 'I am Kitti',
             photo: cat,
 
-            health: this.state.health + Math.floor(Math.random() * 50) + 30,
-            beauty: this.state.beauty + Math.floor(Math.random() * 50) + 30,
-            security: this.state.security + Math.floor(Math.random() * 50) + 30,
-            pleasure: this.state.pleasure + Math.floor(Math.random() * 50) + 30,
-            leisure: this.state.leisure + Math.floor(Math.random() * 50) + 30,
-            actions: this.state.actions + Math.floor(Math.random() * 50) + 30,
+            health: this.state.health + Math.floor(Math.random() * 30) + 15,
+            beauty: this.state.beauty + Math.floor(Math.random() * 30) + 15,
+            security: this.state.security + Math.floor(Math.random() * 30) + 15,
+            pleasure: this.state.pleasure + Math.floor(Math.random() * 30) + 15,
+            leisure: this.state.leisure + Math.floor(Math.random() * 30) + 15,
+            actions: this.state.actions + Math.floor(Math.random() * 30) + 15,
 
             isVisible: false,
             isHidden: true
@@ -158,10 +158,10 @@ export default class Tamagotchi extends Component {
         this.setState({
             health: this.state.health + 5,
             beauty: this.state.beauty + 5,
-            security: this.state.security -2,
+            security: this.state.security -6,
             pleasure: this.state.pleasure + 5,
-            leisure: this.state.leisure - 1,
-            actions: this.state.actions - 1,
+            leisure: this.state.leisure - 5,
+            actions: this.state.actions - 5,
         });
         this.updatePhoto(catEat);
         setTimeout(function () {
@@ -173,9 +173,9 @@ export default class Tamagotchi extends Component {
     cook() {
         const cook = this;
         this.setState({
-            health: this.state.health - 2,
-            beauty: this.state.beauty - 2 ,
-            security: this.state.security -1,
+            health: this.state.health - 7,
+            beauty: this.state.beauty - 7 ,
+            security: this.state.security -5,
             pleasure: this.state.pleasure + 5,
             leisure: this.state.leisure + 1,
             actions: this.state.actions + 1
@@ -192,10 +192,10 @@ export default class Tamagotchi extends Component {
         this.setState({
             health: this.state.health + 1,
             beauty: this.state.beauty + 1,
-            security: this.state.security - 1,
+            security: this.state.security - 5,
             pleasure: this.state.pleasure + 2,
-            leisure: this.state.leisure - 1,
-            actions: this.state.actions - 1
+            leisure: this.state.leisure - 5,
+            actions: this.state.actions - 5
         });
         this.updatePhoto(catSlip);
         setTimeout(function () {
@@ -207,12 +207,12 @@ export default class Tamagotchi extends Component {
     play() {
         const play = this;
         this.setState({
-            health: this.state.health - 3,
-            beauty: this.state.beauty - 3,
-            security: this.state.security - 1,
+            health: this.state.health - 8,
+            beauty: this.state.beauty - 8,
+            security: this.state.security - 5,
             pleasure: this.state.pleasure + 5,
             leisure: this.state.leisure + 3,
-            actions: this.state.actions - 1
+            actions: this.state.actions - 5
         });
         this.updatePhoto(catPlay);
         setTimeout(function () {
@@ -229,7 +229,7 @@ export default class Tamagotchi extends Component {
             security: this.state.security + 1,
             pleasure: this.state.pleasure + 5,
             leisure: this.state.leisure + 5,
-            actions: this.state.actions - 1
+            actions: this.state.actions - 5
         });
         this.updatePhoto(catDance);
         setTimeout(function () {
@@ -242,11 +242,11 @@ export default class Tamagotchi extends Component {
         const catchesMice = this;
         this.setState({
             health: this.state.health + 3,
-            beauty: this.state.beauty - 5,
-            security: this.state.security - 5,
+            beauty: this.state.beauty - 10,
+            security: this.state.security - 10,
             pleasure: this.state.pleasure + 10,
             leisure: this.state.leisure + 1,
-            actions: this.state.actions - 3
+            actions: this.state.actions - 8
         });
         this.updatePhoto(catMice);
         setTimeout(function () {
