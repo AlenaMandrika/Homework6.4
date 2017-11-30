@@ -1,0 +1,22 @@
+{
+  "name": "my-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "material-ui": "^0.19.4",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-responsive-carousel": "^3.1.28",
+    "react-scripts": "1.0.14",
+    "react-tap-event-plugin": "^3.0.2"
+  },
+  "scripts": {
+    "start": "react-scripts-with-sass start",
+    "build": "react-scripts-with-sass build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "create-react-app-sass": "^1.1.0"
+  }
+}
