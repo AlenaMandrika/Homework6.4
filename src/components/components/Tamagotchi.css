@@ -1,9 +1,17 @@
 @charset "UTF-8";
+img {
+  width: 30%;
+  margin-left: 100px; }
+
+h1 {
+  margin-left: 100px;
+  color: mediumblue; }
+
 .options {
   float: left;
   text-align: left;
   margin-left: 30px;
-  margin-top: -50px;
+  margin-top: -60px;
   color: mediumblue; }
 
 .block {
@@ -17,10 +25,10 @@
 .вtnActions {
   text-align: center; }
 
-img {
-  width: 30%;
-  margin-left: 100px; }
+.raised-button {
+  margin: 30px; }
 
-h1 {
-  margin-left: 100px;
+.block-options {
+  font-size: 20px;
+  font-weight: bold;
   color: mediumblue; }

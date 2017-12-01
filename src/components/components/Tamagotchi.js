@@ -151,8 +151,6 @@ export default class Tamagotchi extends Component {
         });
     }
 
-
-
     eat() {
         const eat = this;
         this.setState({
@@ -259,15 +257,16 @@ export default class Tamagotchi extends Component {
         return (
             <div>
                 <div className='вtnActions' hidden={!this.state.isHidden}>
-                    <RaisedButton onClick={this.eat} label="eat" secondary={true} style={{margin: '30px'}}/>
-                    <RaisedButton onClick={this.cook} label="cook" secondary={true} style={{margin: '30px'}}/>
-                    <RaisedButton onClick={this.slip} label="slip" secondary={true} style={{margin: '30px'}}/>
-                    <RaisedButton onClick={this.dance} label="dance" secondary={true} style={{margin: '30px'}}/>
-                    <RaisedButton onClick={this.play} label="play" secondary={true} style={{margin: '30px'}}/>
-                    <RaisedButton onClick={this.catchesMice} label="catches mice" secondary={true} style={{margin: '30px'}}/>
+                    <RaisedButton className='raised-button' onClick={this.eat} label="eat" secondary={true}/>
+                    <RaisedButton className='raised-button' onClick={this.cook} label="cook" secondary={true}/>
+                    <RaisedButton className='raised-button' onClick={this.slip} label="slip" secondary={true}/>
+                    <RaisedButton className='raised-button' onClick={this.dance} label="dance" secondary={true}/>
+                    <RaisedButton className='raised-button' onClick={this.play} label="play" secondary={true}/>
+                    <RaisedButton className='raised-button' onClick={this.catchesMice} label="catches mice" secondary={true}/>
                 </div>
                 <div>
                     <div className='options'>
+                        <div className='block-options'>Options:</div>
                         health: {this.state.health}
                         <br/>
                         beauty: {this.state.beauty}
