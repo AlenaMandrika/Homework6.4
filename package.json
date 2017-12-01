@@ -13,8 +13,8 @@
   "scripts": {
     "start": "react-scripts-with-sass start",
     "build": "react-scripts-with-sass build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom"
+
   },
   "devDependencies": {
     "create-react-app-sass": "^1.1.0"
