@@ -65,7 +65,7 @@ export default class Tamagotchi extends Component {
     }
 
     live() {
-        if (this.state.health < 0) {
+        if (this.state.health <= 0) {
             alert('Game OVER!');
             this.clear();
             this.setState({
@@ -76,7 +76,7 @@ export default class Tamagotchi extends Component {
                 leisure: 0,
                 actions: 0,
             });
-        } else if (this.state.beauty < 0) {
+        } else if (this.state.beauty <= 0) {
             alert('Game OVER!');
             this.clear();
             this.setState({
@@ -87,7 +87,7 @@ export default class Tamagotchi extends Component {
                 leisure: 0,
                 actions: 0,
             });
-        } else if (this.state.security < 0) {
+        } else if (this.state.security <= 0) {
             alert('Game OVER!');
             this.clear();
             this.setState({
@@ -98,7 +98,7 @@ export default class Tamagotchi extends Component {
                 leisure: 0,
                 actions: 0,
             });
-        } else if (this.state.pleasure < 0) {
+        } else if (this.state.pleasure <= 0) {
             alert('Game OVER!');
             this.clear();
             this.setState({
@@ -109,7 +109,7 @@ export default class Tamagotchi extends Component {
                 leisure: 0,
                 actions: 0,
             });
-        } else if (this.state.leisure < 0) {
+        } else if (this.state.leisure <= 0) {
             alert('Game OVER!');
             this.clear();
             this.setState({
@@ -120,7 +120,7 @@ export default class Tamagotchi extends Component {
                 leisure: 0,
                 actions: 0,
             });
-        } else if (this.state.actions < 0) {
+        } else if (this.state.actions <= 0) {
             alert('Game OVER!');
             this.clear();
             this.setState({
@@ -164,7 +164,7 @@ export default class Tamagotchi extends Component {
             let self = this;
             setTimeout(function () {
             self.live()
-        }, 1000)});
+        }, 50)});
         this.updatePhoto(catEat);
         setTimeout(function () {
             eat.updatePhoto(cat)
@@ -180,7 +180,11 @@ export default class Tamagotchi extends Component {
             pleasure: this.state.pleasure + 5,
             leisure: this.state.leisure + 1,
             actions: this.state.actions + 1
-        });
+        }, () => {
+            let self = this;
+            setTimeout(function () {
+                self.live()
+            }, 50)});
         this.live();
         this.updatePhoto(catCook);
         setTimeout(function () {
@@ -197,7 +201,11 @@ export default class Tamagotchi extends Component {
             pleasure: this.state.pleasure + 2,
             leisure: this.state.leisure - 5,
             actions: this.state.actions - 5
-        });
+        }, () => {
+            let self = this;
+            setTimeout(function () {
+                self.live()
+            }, 50)});
         this.live();
         this.updatePhoto(catSlip);
         setTimeout(function () {
@@ -214,7 +222,11 @@ export default class Tamagotchi extends Component {
             pleasure: this.state.pleasure + 5,
             leisure: this.state.leisure + 3,
             actions: this.state.actions - 5
-        });
+        }, () => {
+            let self = this;
+            setTimeout(function () {
+                self.live()
+            }, 50)});
         this.live();
         this.updatePhoto(catPlay);
         setTimeout(function () {
@@ -231,7 +243,11 @@ export default class Tamagotchi extends Component {
             pleasure: this.state.pleasure + 5,
             leisure: this.state.leisure + 5,
             actions: this.state.actions - 5
-        });
+        }, () => {
+            let self = this;
+            setTimeout(function () {
+                self.live()
+            }, 50)});
         this.live();
         this.updatePhoto(catDance);
         setTimeout(function () {
@@ -248,7 +264,11 @@ export default class Tamagotchi extends Component {
             pleasure: this.state.pleasure + 10,
             leisure: this.state.leisure + 1,
             actions: this.state.actions - 8
-        });
+        }, () => {
+            let self = this;
+            setTimeout(function () {
+                self.live()
+            }, 50)});
         this.live();
         this.updatePhoto(catMice);
         setTimeout(function () {
