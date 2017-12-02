@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Tamagotchi from './components/Tamagotchi'
-import Header from './components/Header'
+import Tamagotchi from './Tamagotchi/Tamagotchi'
+import Header from './Header/Header'
 
 import './App.css'
 

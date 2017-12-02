@@ -160,12 +160,15 @@ export default class Tamagotchi extends Component {
             pleasure: this.state.pleasure + 5,
             leisure: this.state.leisure - 5,
             actions: this.state.actions - 5,
-        });
+        },() => {
+            let self = this;
+            setTimeout(function () {
+            self.live()
+        }, 1000)});
         this.updatePhoto(catEat);
         setTimeout(function () {
             eat.updatePhoto(cat)
         }, 20000);
-        this.live()
     }
 
     cook() {
@@ -178,11 +181,11 @@ export default class Tamagotchi extends Component {
             leisure: this.state.leisure + 1,
             actions: this.state.actions + 1
         });
+        this.live();
         this.updatePhoto(catCook);
         setTimeout(function () {
             cook.updatePhoto(cat)
         }, 20000);
-        this.live()
     }
 
     slip() {
@@ -195,11 +198,11 @@ export default class Tamagotchi extends Component {
             leisure: this.state.leisure - 5,
             actions: this.state.actions - 5
         });
+        this.live();
         this.updatePhoto(catSlip);
         setTimeout(function () {
             slip.updatePhoto(cat)
         }, 20000);
-        this.live()
     }
 
     play() {
@@ -212,11 +215,11 @@ export default class Tamagotchi extends Component {
             leisure: this.state.leisure + 3,
             actions: this.state.actions - 5
         });
+        this.live();
         this.updatePhoto(catPlay);
         setTimeout(function () {
             play.updatePhoto(cat)
         }, 20000);
-        this.live()
     }
 
     dance() {
@@ -229,11 +232,11 @@ export default class Tamagotchi extends Component {
             leisure: this.state.leisure + 5,
             actions: this.state.actions - 5
         });
+        this.live();
         this.updatePhoto(catDance);
         setTimeout(function () {
             dance.updatePhoto(cat)
         }, 20000);
-        this.live()
     }
 
     catchesMice() {
@@ -246,11 +249,11 @@ export default class Tamagotchi extends Component {
             leisure: this.state.leisure + 1,
             actions: this.state.actions - 8
         });
+        this.live();
         this.updatePhoto(catMice);
         setTimeout(function () {
             catchesMice.updatePhoto(cat)
         }, 20000);
-        this.live()
     }
 
     render() {
